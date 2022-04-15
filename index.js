@@ -28,13 +28,27 @@
 
 ///////////////////////
 /// solution 3
-function factorialize(num) {
-	for (var x = 1; num >= 1; num--) {
-		x *= num;
-	}
-	return x;
+// function factorialize(num) {
+// 	for (var x = 1; num >= 1; num--) {
+// 		x *= num;
+// 	}
+// 	return x;
+// }
+// console.log(factorialize(5));
+// console.log(factorialize(10));
+// console.log(factorialize(20));
+// console.log(factorialize(0));
+
+////////////////////////////////////////
+
+/// chalenge 2 : capitalize the first letters
+
+function capitalize(str) {
+	let tempArr = str.toLowerCase().split(" ");
+	let result = tempArr.map((val) =>
+		val.replace(val.charAt(0), val.charAt(0).toUpperCase())
+	);
+	return result.join(" ");
 }
-console.log(factorialize(5));
-console.log(factorialize(10));
-console.log(factorialize(20));
-console.log(factorialize(0));
+console.log(capitalize("I'm a little tea pot"));
+console.log(capitalize("caeser ibrahim"));
