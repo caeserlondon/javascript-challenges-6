@@ -12,13 +12,27 @@
 // console.log(factorialize(10));
 // console.log(factorialize(20));
 // console.log(factorialize(0));
+
 //////////////////
-/// solution 2
+// /// solution 2
+// function factorialize(num) {
+// 	if (num === 0) {
+// 		return 1;
+// 	}
+// 	return num * factorialize(num - 1);
+// }
+// console.log(factorialize(5));
+// console.log(factorialize(10));
+// console.log(factorialize(20));
+// console.log(factorialize(0));
+
+///////////////////////
+/// solution 3
 function factorialize(num) {
-	if (num === 0) {
-		return 1;
+	for (var x = 1; num >= 1; num--) {
+		x *= num;
 	}
-	return num * factorialize(num - 1);
+	return x;
 }
 console.log(factorialize(5));
 console.log(factorialize(10));
