@@ -55,18 +55,44 @@
 
 //////////////////
 //// /// solution 2
-function capitalize(str) {
-	str = str.split(" ");
+// function capitalize(str) {
+// 	str = str.split(" ");
 
-	for (let i = 0; i < str.length; i++) {
-		str[i] = str[i].toLowerCase().split("");
+// 	for (let i = 0; i < str.length; i++) {
+// 		str[i] = str[i].toLowerCase().split("");
 
-		str[i][0] = str[i][0].toUpperCase();
+// 		str[i][0] = str[i][0].toUpperCase();
 
-		str[i] = str[i].join("");
+// 		str[i] = str[i].join("");
+// 	}
+// 	return str.join(" ");
+// }
+
+// console.log(capitalize("I'm a little tea pot"));
+// console.log(capitalize("caeser ibrahim"));
+
+//////////////////////////////////
+
+//////// Challenge 3
+///return the hightest number  from each array into a newc array
+let numArr = [
+	[583, 999, 113, 55],
+	[600, 187, 798, 444],
+	[1023, 77, 832, 285],
+	[83, 99, 113, 555],
+];
+/////solution 1
+function hightestNumber(arr) {
+	let result = [];
+	for (let n = 0; n < arr.length; n++) {
+		let largestNum = arr[n][0];
+		for (let sub = 1; sub < arr[n].length; sub++) {
+			if (arr[n][sub] > largestNum) {
+				largestNum = arr[n][sub];
+			}
+		}
+		result[n] = largestNum;
 	}
-	return str.join(" ");
+	return result;
 }
-
-console.log(capitalize("I'm a little tea pot"));
-console.log(capitalize("caeser ibrahim"));
+console.log(hightestNumber(numArr));
