@@ -82,17 +82,30 @@ let numArr = [
 	[83, 99, 113, 555],
 ];
 /////solution 1
+// function hightestNumber(arr) {
+// 	let result = [];
+// 	for (let n = 0; n < arr.length; n++) {
+// 		let largestNum = arr[n][0];
+// 		for (let sub = 1; sub < arr[n].length; sub++) {
+// 			if (arr[n][sub] > largestNum) {
+// 				largestNum = arr[n][sub];
+// 			}
+// 		}
+// 		result[n] = largestNum;
+// 	}
+// 	return result;
+// }
+// console.log(hightestNumber(numArr));
+
+////////////////////////
+
+/////solution 1
 function hightestNumber(arr) {
-	let result = [];
-	for (let n = 0; n < arr.length; n++) {
-		let largestNum = arr[n][0];
-		for (let sub = 1; sub < arr[n].length; sub++) {
-			if (arr[n][sub] > largestNum) {
-				largestNum = arr[n][sub];
-			}
-		}
-		result[n] = largestNum;
-	}
-	return result;
+	return arr.map(function (group) {
+		return group.reduce(function (prev, current) {
+			return current > prev ? current : prev;
+		});
+	});
 }
+
 console.log(hightestNumber(numArr));
