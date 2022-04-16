@@ -99,7 +99,7 @@ let numArr = [
 
 ////////////////////////
 
-/////solution 1
+/////solution 2
 function hightestNumber(arr) {
 	return arr.map(function (group) {
 		return group.reduce(function (prev, current) {
