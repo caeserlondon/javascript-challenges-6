@@ -117,3 +117,22 @@
 ///// CAESER CIPHER  or shift cipher
 
 /// r is to replace each plaintext letter with a different one a fixed number of places down the alphabet
+///// shift by 13 and use capital letters
+
+function cipher(str) {
+	let result = "";
+	for (let i = 0; i < str.length; i++) {
+		let asciiNum = str[i].charCodeAt();
+		if (asciiNum >= 65 && asciiNum <= 77) {
+			result += String.fromCharCode(asciiNum + 13);
+		} else if (asciiNum >= 78 && asciiNum <= 90) {
+			result += String.fromCharCode(asciiNum - 13);
+		} else {
+			result += str[i];
+		}
+	}
+	return result;
+}
+
+console.log(cipher("A"));
+console.log(cipher("SERR PBQR PNZC"));
