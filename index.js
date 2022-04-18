@@ -73,39 +73,47 @@
 
 //////////////////////////////////
 
-//////// Challenge 3
-///return the hightest number  from each array into a newc array
-let numArr = [
-	[583, 999, 113, 55],
-	[600, 187, 798, 444],
-	[1023, 77, 832, 285],
-	[83, 99, 113, 555],
-];
-/////solution 1
+// //////// Challenge 3
+// ///return the hightest number  from each array into a newc array
+// let numArr = [
+// 	[583, 999, 113, 55],
+// 	[600, 187, 798, 444],
+// 	[1023, 77, 832, 285],
+// 	[83, 99, 113, 555],
+// ];
+// /////solution 1
+// // function hightestNumber(arr) {
+// // 	let result = [];
+// // 	for (let n = 0; n < arr.length; n++) {
+// // 		let largestNum = arr[n][0];
+// // 		for (let sub = 1; sub < arr[n].length; sub++) {
+// // 			if (arr[n][sub] > largestNum) {
+// // 				largestNum = arr[n][sub];
+// // 			}
+// // 		}
+// // 		result[n] = largestNum;
+// // 	}
+// // 	return result;
+// // }
+// // console.log(hightestNumber(numArr));
+
+// ////////////////////////
+
+// /////solution 2
 // function hightestNumber(arr) {
-// 	let result = [];
-// 	for (let n = 0; n < arr.length; n++) {
-// 		let largestNum = arr[n][0];
-// 		for (let sub = 1; sub < arr[n].length; sub++) {
-// 			if (arr[n][sub] > largestNum) {
-// 				largestNum = arr[n][sub];
-// 			}
-// 		}
-// 		result[n] = largestNum;
-// 	}
-// 	return result;
+// 	return arr.map(function (group) {
+// 		return group.reduce(function (prev, current) {
+// 			return current > prev ? current : prev;
+// 		});
+// 	});
 // }
+
 // console.log(hightestNumber(numArr));
 
-////////////////////////
+///////////////////////////////////////////
 
-/////solution 2
-function hightestNumber(arr) {
-	return arr.map(function (group) {
-		return group.reduce(function (prev, current) {
-			return current > prev ? current : prev;
-		});
-	});
-}
+////// CHALENGE 4
 
-console.log(hightestNumber(numArr));
+///// CAESER CIPHER  or shift cipher
+
+/// r is to replace each plaintext letter with a different one a fixed number of places down the alphabet
